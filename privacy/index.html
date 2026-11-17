@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Privacy Policy — VedaVani</title>
-<meta name="description" content="Privacy policy for VedaVani, an iPhone app for reading and reflecting on the Bhagavad Gita.">
+<meta name="description" content="Privacy policy for VedaVani, an iPhone and iPad app for asking questions of Hindu scripture and reading it.">
 <link rel="stylesheet" href="../style.css">
 </head>
 <body>
@@ -14,76 +14,122 @@
   <p class="mark">ॐ</p>
   <h1>Privacy Policy</h1>
   <p class="lede">VedaVani — iPhone and iPad</p>
-  <p class="meta">Last updated 1 September 2026</p>
+  <p class="meta">Last updated 18 November 2026</p>
 </header>
 
-<p>VedaVani is a quiet place to read the Bhagavad Gita, ask it a question, and write down what you make of it. It is built to keep your reflections yours.</p>
+<p>VedaVani is a quiet companion to Hindu scripture &mdash; the Bhagavad Gita, the Upanishads, the Vedas and the epics. It is built to work without an account, and to keep what you write on your own device unless you explicitly choose otherwise.</p>
 
-<p><strong>The short version:</strong> everything works with no account and no network. Nothing you write leaves your iPhone unless you deliberately sign in to turn on backup. There are no ads, no analytics, no trackers, and nothing is ever sold or shared with advertisers.</p>
+<h2>The short version</h2>
 
-<h2>What the app stores on your device</h2>
-<p>Used offline, VedaVani keeps all of this on your iPhone only, inside the app's private storage:</p>
 <ul>
-  <li><strong>Reflections</strong> — the notes you write, and the verse the app matched to each one.</li>
-  <li><strong>Ask conversations</strong> — the question you asked, the response shown, and the verse it cited.</li>
-  <li><strong>Your display name</strong> — whatever you type on the welcome screen, used only to greet you.</li>
-  <li><strong>Your daily reminder time</strong> — used to schedule a local notification on your device.</li>
+  <li>Everything you write is stored <strong>on your device</strong> by default.</li>
+  <li>Signing in is <strong>optional</strong>. It exists only so your words can be backed up and restored if you lose or replace your phone.</li>
+  <li>We show <strong>no ads</strong>, use <strong>no analytics</strong>, and do <strong>no tracking</strong>.</li>
+  <li><strong>Guided answers are optional.</strong> Only if you turn them on is a question you ask sent off your phone &mdash; to our server, to Anthropic so that AI can choose the passage and write the answer, and the answer to OpenAI so it can be read aloud.</li>
+  <li>We never sell or share your data, and we do not use it to train models.</li>
 </ul>
-<p>Deleting the app removes all of it. Your name and reminder time never leave your device under any circumstances.</p>
 
-<h2>Signing in (optional)</h2>
-<p>You can use every part of VedaVani signed out. If you choose <strong>Sign in with Apple</strong>, the app turns on cloud backup so your reflections and conversations survive a lost or replaced phone. Signing in sends the following to our backend, which runs on <a href="https://supabase.com/privacy" rel="noopener">Supabase</a>:</p>
+<h2>What we store, and when</h2>
+
+<p><strong>Without an account (default).</strong> Your reflections, your Ask history, your name, and your reminder time are stored only on your device, in the app's private storage. Nothing leaves your phone. Deleting the app deletes this data.</p>
+
+<p><strong>With an account (optional).</strong> If you choose Sign in with Apple, we store the following on servers operated by Supabase (hosted in Tokyo, Japan) so it can be restored to your devices:</p>
 
 <table>
   <thead><tr><th>Data</th><th>Why</th></tr></thead>
   <tbody>
-    <tr><td>User ID (a random account identifier)</td><td>To label your rows so only you can read them.</td></tr>
-    <tr><td>Email address, from Sign in with Apple</td><td>To identify your account across devices and sign-ins.</td></tr>
-    <tr><td>Your reflections and Ask conversations</td><td>To back them up and restore them on your other devices.</td></tr>
+    <tr><td>A user ID (a random identifier from Apple)</td><td>To keep your data yours</td></tr>
+    <tr><td>Your email address</td><td>Provided by Apple at sign-in; identifies your account. If you chose Apple's "Hide My Email", we only ever see the relay address</td></tr>
+    <tr><td>Your first name</td><td>Provided by Apple at sign-in, only to greet you by name</td></tr>
+    <tr><td>Your reflections (written in earlier versions of the app)</td><td>So they can be restored</td></tr>
+    <tr><td>Your Ask questions and the verses returned</td><td>So they can be restored</td></tr>
   </tbody>
 </table>
 
-<p>Apple's <em>Hide My Email</em> is fully supported. If you use it, we only ever see Apple's private relay address, never your real one.</p>
-
-<p>Backed-up rows are protected by row-level security: the database will only return rows belonging to your own signed-in account. We do not read your reflections, and they are not used to train any model.</p>
+<p>Your data is protected by row-level security: your account can read and write only its own rows.</p>
 
 <h2>Microphone and speech</h2>
-<p>When you tap the ॐ to ask a question aloud, the app records only while you are asking and passes the audio to Apple's built-in speech recognition to turn it into text. VedaVani never stores the audio and never sends audio to us or to any third party. Only the resulting text is kept, as an Ask conversation, in the places described above. Apple's handling of speech audio is covered by <a href="https://www.apple.com/legal/privacy/" rel="noopener">Apple's Privacy Policy</a>.</p>
-<p>If you would rather not use the microphone, you can deny microphone access and type your question instead — the app is designed to work that way.</p>
+
+<p>When you tap to ask aloud, the app records audio only while you are speaking, and only to turn it into text. <strong>That audio is never sent to our servers and is never stored.</strong> Speech-to-text is performed by Apple's speech recognition on your device; depending on your device, language, and settings, Apple may process some audio on its own servers, which is governed by <a href="https://www.apple.com/legal/privacy/" rel="noopener">Apple's Privacy Policy</a>. You can use the app entirely without the microphone by typing your question instead.</p>
+
+<h2>Guided answers (optional)</h2>
+
+<p>The first time you ask a question, the app asks whether to use guided answers. If you say no, everything stays on your phone: the library is searched on the device and the closest passage is chosen there.</p>
+
+<p>If you say yes, each question you ask is sent to our server (a Supabase Edge Function, hosted in Tokyo, Japan) together with:</p>
+
+<table>
+  <thead><tr><th>Data</th><th>Why</th></tr></thead>
+  <tbody>
+    <tr><td>The passages your phone found for the question</td><td>So the best one can be chosen. These are public scripture texts</td></tr>
+    <tr><td>Your phone's language setting</td><td>So the answer is written and spoken in your language</td></tr>
+    <tr><td>Up to 12 short memory notes (see below)</td><td>So the answer understands what you are going through</td></tr>
+    <tr><td>The app version</td><td>To keep the reply compatible with your app</td></tr>
+    <tr><td>A random install identifier, created by the app</td><td>To apply a daily fair-use limit. It is not derived from your device or from you; deleting the app resets it</td></tr>
+    <tr><td>Your account token, if you are signed in</td><td>To apply the limit to your account instead</td></tr>
+  </tbody>
+</table>
+
+<p>Our server forwards the question, your language, your notes and the passages to <strong>Anthropic's Claude API</strong>, which chooses one passage, retells it in simple words and writes a short reflection. Anthropic processes this for us under its commercial terms and its <a href="https://www.anthropic.com/legal/privacy" rel="noopener">Privacy Policy</a>; it does not use it to train its models. Our server then sends the text of that answer &mdash; the retelling and the reflection, not your question &mdash; to <strong>OpenAI's text-to-speech API</strong> so it can be read aloud to you. OpenAI processes it for us under its API terms and its <a href="https://openai.com/policies/privacy-policy" rel="noopener">Privacy Policy</a>; it does not use data sent through its API to train its models. The scripture you see always comes from the library inside the app &mdash; AI only chooses which passage to show, and anything AI writes is labelled as such.</p>
+
+<p>With guided answers on, the day's verse on the Today page is also sent to Claude once so it can be retold in simple words. It is public scripture text, sent with your language and nothing about you.</p>
+
+<h3>Memory notes</h3>
+
+<p>With guided answers on, Claude may write a short note after an answer &mdash; for example "Preparing for a job interview after a long gap" &mdash; so that later answers understand what you are going through. Notes are stored <strong>only on your device</strong> (they are not part of your backup) and the newest are sent with each guided question. You can read every note in <strong>Settings → Memory</strong>, delete any one of them, or forget them all. Start over and Delete all data also clear them.</p>
+
+<p>We do <strong>not</strong> store your question on our server, and our logs record only counts and timings. To count the daily limit we keep the install identifier or account ID and a keyed hash of your network address (the key is secret and changes daily, so it can't be turned back into the address), each with a number of requests for the day &mdash; never the question. These counts are deleted automatically after a day, and an account's counts when the account is deleted. Like any web service, our hosting provider's infrastructure may log network addresses briefly for security. Questions you ask are kept in your Ask history on your device (and in your backup, if you are signed in), as described above.</p>
+
+<p>You can turn guided answers off at any time in Settings.</p>
+
+<h2>Horoscope (optional)</h2>
+
+<p>If you add your birth details for the daily rashiphal &mdash; date of birth, and optionally your birth time and place &mdash; they are stored <strong>only on your device</strong>. They are not part of your backup, are not sent to our server, and are cleared by Start over and Delete all data. Your chart and readings are computed on the device.</p>
+
+<p>When you search for your birth place, the letters you type are sent to Apple's map service to suggest places; this is governed by <a href="https://www.apple.com/legal/privacy/" rel="noopener">Apple's Privacy Policy</a>.</p>
+
+<h2>Palm reading (optional)</h2>
+
+<p>If you use palm reading, the camera feed and the photo you take &mdash; or a photo you choose from your library &mdash; are analysed <strong>on your device</strong>. VedaVani never saves the photo, adds it to your backup, or sends it to us or anyone else: it is held in memory while your reading is open and discarded when you start another reading or the app quits. The app only accesses the camera while the palm reading camera is open, and only photos you pick yourself.</p>
 
 <h2>Notifications</h2>
-<p>The daily reminder is scheduled locally on your device by iOS. There is no push server, and we cannot send you a message.</p>
 
-<h2>What VedaVani does not do</h2>
+<p>If you turn on the daily verse reminder, the reminder is scheduled locally on your device &mdash; including, if you added birth details, the day's rashiphal line. No notification data is sent to us or through a server.</p>
+
+<h2>What we do not do</h2>
+
 <ul>
   <li>No advertising, and no advertising identifiers.</li>
-  <li>No analytics or crash-reporting SDKs.</li>
-  <li>No tracking of you across other companies' apps or websites.</li>
-  <li>No selling or renting of personal information, ever.</li>
-  <li>No location, contacts, photos, health, or financial data is requested or collected.</li>
+  <li>No analytics or telemetry SDKs.</li>
+  <li>No tracking across apps or websites, and no data brokers.</li>
+  <li>No third-party services other than these, each acting on our behalf and not for its own purposes: <strong>Supabase</strong>, which stores your backup and runs our server; <strong>Anthropic</strong>, which chooses passages and writes guided answers if you turn them on; <strong>OpenAI</strong>, which reads guided answers aloud if you turn them on (it receives only the answer's text); and <strong>RevenueCat</strong>, which confirms Pro purchases with Apple (it receives a purchase identifier, and your account ID if you are signed in, but no questions or reflections).</li>
 </ul>
 
 <h2>Deleting your data</h2>
-<ul>
-  <li><strong>A single reflection or conversation:</strong> delete it in the app. If you are signed in, the backup copy is deleted too.</li>
-  <li><strong>Everything on the device:</strong> delete the app.</li>
-  <li><strong>Everything in the backup, plus your account:</strong> email <a href="mailto:developer.aktsk.yashaswi.kumar@gmail.com">developer.aktsk.yashaswi.kumar@gmail.com</a> from the address linked to your account, or with your Hide My Email relay address. Accounts and all associated rows are erased within 30 days.</li>
-</ul>
-<p>You may also ask what is stored about you and receive a copy, at the same address.</p>
 
-<h2>Retention</h2>
-<p>Backed-up reflections and conversations are kept until you delete them or delete your account. Signed out, nothing is retained by us at all.</p>
+<p>Both options are in the app, under the gear icon:</p>
+
+<ul>
+  <li><strong>Delete all data</strong> removes your reflections, Ask history and memory notes from this device and from your backup, while keeping your account.</li>
+  <li><strong>Delete account</strong> permanently deletes your account and everything stored with it. This cannot be undone.</li>
+</ul>
+
+<p>You may also simply delete the app, which removes everything stored on the device. If you had an account, use <strong>Delete account</strong> first.</p>
 
 <h2>Children</h2>
-<p>VedaVani is not directed at children under 13, and we do not knowingly collect personal information from them. If you believe a child has given us information, write to the address above and it will be deleted.</p>
 
-<h2>Scripture text</h2>
-<p>The Bhagavad Gita verses included in the app are in the public domain. The English translation is Kisari Mohan Ganguli&rsquo;s (1883&ndash;1896), also public domain, lightly modernised for readability.</p>
+<p>VedaVani is not directed at children under 13, and we do not knowingly collect information from them.</p>
+
+<h2>Scripture</h2>
+
+<p>Every English translation in the library is in the public domain; the app's Sources page credits each translator. Sanskrit text, where shown, comes from openly licensed digital editions, also credited there.</p>
 
 <h2>Changes</h2>
-<p>If this policy changes materially, the updated version will be posted on this page with a new date above, before the change takes effect.</p>
+
+<p>If this policy changes materially, the updated version will be posted here with a new date above.</p>
 
 <h2>Contact</h2>
+
 <p>VedaVani is made by an independent developer.<br>
 Email: <a href="mailto:developer.aktsk.yashaswi.kumar@gmail.com">developer.aktsk.yashaswi.kumar@gmail.com</a></p>
 
